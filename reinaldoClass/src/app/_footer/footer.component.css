@@ -1,0 +1,7 @@
+a {
+  color: rgba(9, 3, 31, 0.6) !important;
+}
+
+a:hover {
+  color: #f0b686 !important;
+}

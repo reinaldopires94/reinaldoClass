@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "reinaldobackend": {
+      "hosting": {
+        "reinaldoClass": [
+          "reinaldobackend"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "reinaldobackend"
+  }
+}

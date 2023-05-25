@@ -16,5 +16,6 @@ export class HeaderComponent implements OnInit {
 
   logOut(){
    this.router.navigateByUrl('/');
+   this.isAuthenticated = !this.isAuthenticated;
   }
 }

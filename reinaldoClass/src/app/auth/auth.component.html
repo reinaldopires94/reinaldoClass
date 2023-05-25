@@ -1,1 +1,51 @@
-<p>auth works!</p>
+<div class="container">
+  <div class="row">
+    <div class="container col-6 col-md-offset-3">
+      <!-- carregando o spinner -->
+      <div *ngIf="isLodingSpinner" style="text-align: center;">
+        <!-- <app-spinner></app-spinner> -->
+      </div>
+      <form [formGroup]="authenticationForm" (ngSubmit)="onSubmit()" *ngIf="!isLodingSpinner">
+        <div class="mb-4">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="name@example.com" formControlName="email">
+        </div>
+        <div class="mb-4">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Min 8 dig with 1 special caracter"
+            formControlName="password">
+        </div>
+        <div class="mb-4">
+          <button type="submit" class="btn btn-primary" [disabled]="!authenticationForm.valid">{{ isLoginMode ? "Login"
+            : " Sign Up "}}</button> |
+          <button type="button" class="btn btn-secondary" (click)="onSwitchMode()">Switch to {{ isLoginMode ? "Sign Up"
+            : " Login "}}</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle.displayBlock}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="alert {{ this.displayStyle.displayStyle }}" role="alert">
+        <div class="modal-header">
+          <h4 class="modal-title"> {{ this.localModal?.status}}</h4>
+        </div>
+        <div class="modal-body">
+          <p>{{ this.localModal?.name}}</p>
+          <p>{{ this.localModal?.statusText}}</p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" (click)="closeModal()">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

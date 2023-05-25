@@ -98,6 +98,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "reinaldoClass:build:production",
+            "firebaseProject": "reinaldobackend",
+            "firebaseHostingSite": "reinaldobackend"
+          }
         }
       }
     }
