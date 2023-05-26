@@ -40,13 +40,13 @@ export class AuthComponent implements OnInit {
         {
           next: (data: IAuthApiToken) => {
             this.isLodingSpinner = false;
-            console.log('Response Data: ',data)
+          //  console.log('Response Data: ',data)
             this.localModal.name = 'All Right!!! ';
             this.localModal['status'] = 'Welcome';
             this.localModal['statusText'] = 'You are Login';
             this.displayStyle.displayStyle = 'alert-success';
             this.openModal();
-            // this.router.navigateByUrl('/recipes');
+             this.router.navigateByUrl('/body');
 
 
           },

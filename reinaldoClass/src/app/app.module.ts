@@ -14,8 +14,8 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { SpinnerComponent } from './_share/spinner/spinner.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AuthModule } from './_auth/auth.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { AuthInterceptorService } from './_auth/auth-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
     provideDatabase(() => getDatabase())
   ],
   exports: [SpinnerComponent],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

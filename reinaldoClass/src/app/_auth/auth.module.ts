@@ -9,13 +9,16 @@ import { AppModule } from '../app.module';
 
 @NgModule({
     declarations: [
-        AuthComponent
+        AuthComponent,
+
+
     ],
     imports: [
         CommonModule,
         ReactiveFormsModule,
         FormsModule,
-    
+        AppModule
+
 
     ]
 })

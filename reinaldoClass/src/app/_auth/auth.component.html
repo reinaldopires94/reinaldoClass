@@ -3,7 +3,7 @@
     <div class="container col-6 col-md-offset-3">
       <!-- carregando o spinner -->
       <div *ngIf="isLodingSpinner" style="text-align: center;">
-        <!-- <app-spinner></app-spinner> -->
+        <app-spinner></app-spinner>
       </div>
       <form [formGroup]="authenticationForm" (ngSubmit)="onSubmit()" *ngIf="!isLodingSpinner">
         <div class="mb-4">
