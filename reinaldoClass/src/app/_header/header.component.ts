@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  isAuthenticated: boolean = true;
+  isAuthenticated!: boolean;
   userSubs!: Subscription;
   constructor(private auth: AuthService) { }
 
