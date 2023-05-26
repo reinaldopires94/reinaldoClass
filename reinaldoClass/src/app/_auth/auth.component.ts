@@ -28,8 +28,8 @@ export class AuthComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSwitchMode() {
-    this.isLoginMode = !this.isLoginMode;
+  changeRouter(){
+    this.router.navigateByUrl('/body');
   }
 
   onSubmit() {

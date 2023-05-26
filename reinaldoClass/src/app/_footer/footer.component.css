@@ -1,7 +1,44 @@
+.container {
+ width: fit-content;
+ height: 6vh;
+ display: flex;
+ align-items: center;
+
+}
+
 a {
   color: rgba(9, 3, 31, 0.6) !important;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-size: 0.6em;
+  font-weight: bold;
+  line-height: 0.3em;
+  text-shadow: 2px 4px 5px #eee, 0 0 1px rgb(49, 46, 46);
+  letter-spacing: 1px; word-spacing: 2px;
 }
 
 a:hover {
   color: #f0b686 !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

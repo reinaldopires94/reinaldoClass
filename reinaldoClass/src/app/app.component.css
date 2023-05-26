@@ -1,3 +1,7 @@
+.main {
+  width: 100%;
+  height: fit-content;
+}
 .row {
   padding: 0% !important;
   --bs-gutter-x: 0% !important;
@@ -27,13 +31,15 @@ body {
 
 footer {
   position: absolute;
+  margin: 0%;
+  padding: 0%;
   bottom: 0;
   background: linear-gradient(68.15deg, #e0e2e6 14.62%, #09031f 85.61%);
   color: rgba(9, 3, 31, 0.6);
   width: 100%;
-  height: fit-content;
+
   text-align: center;
-  line-height: 80px;
+  /* line-height: 80px; */
 }
 
 a {
@@ -43,3 +49,10 @@ a {
 a:hover {
   color: #f0b686 !important;
 }
+
+.bg-dark {
+  background: linear-gradient(68.15deg, #09031f 14.62%, #07389b 85.61%);
+
+}
+/* .navbar-brand {
+} */
