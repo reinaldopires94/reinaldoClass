@@ -1,0 +1,12 @@
+a{
+  color: rgba(255, 255, 255, 0.55) !important;
+}
+a:hover{
+  color: #f0b686 !important;
+}
+.justify-content-end {
+  background: linear-gradient(68.15deg, #07389b 14.62%, #09031f 85.61%);
+
+}
+
+

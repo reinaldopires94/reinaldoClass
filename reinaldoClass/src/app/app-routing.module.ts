@@ -13,10 +13,11 @@ import { environment } from 'src/environments/environment';
 
 const routes: Routes = [
   { path: '', redirectTo: '/body', pathMatch: 'full' },
-  { path: 'cSharp', component: CSharpComponent},
-  { path: 'dataBase', component: DataBaseComponent},
+  { path: 'cSharp', component: CSharpComponent },
+  { path: 'dataBase', component: DataBaseComponent },
   { path: 'body', component: BodyComponent },
-  { path: 'auth', loadChildren: () => import('./_auth/auth.module').then(module => module.AuthModule)},
+  { path: 'auth', loadChildren: () => import('./_auth/auth.module').then(module => module.AuthModule) },
+  { path: '**', redirectTo: '' }
 
 
 ];
