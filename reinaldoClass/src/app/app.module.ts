@@ -14,7 +14,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { SpinnerComponent } from './_share/spinner/spinner.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AuthModule } from './auth/auth.module';
+import { AuthModule } from './_auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({

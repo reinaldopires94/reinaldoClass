@@ -4,8 +4,8 @@ import { AngularFireModule} from '@angular/fire/compat'
 
 
 
-import { AuthModule } from './auth/auth.module';
-import { AuthComponent } from './auth/auth.component';
+import { AuthModule } from './_auth/auth.module';
+import { AuthComponent } from './_auth/auth.component';
 import { CSharpComponent } from './c-sharp/c-sharp.component';
 import { DataBaseComponent } from './data-base/data-base.component';
 import { BodyComponent } from './_body/body.component';

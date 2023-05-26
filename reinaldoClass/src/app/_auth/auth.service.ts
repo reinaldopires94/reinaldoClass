@@ -29,11 +29,29 @@ export class AuthService {
     const expirationDate = new Date(new Date().getTime() + expiresIn * 1000);
     const localUserToken = new UserTokenModel(email, userId, token, expirationDate);
     this.isUserLogin.next(localUserToken);
-    this.autoLogoutWithLocalStorage(expiresIn * 1000); //tranformando em Milisegundo
+    this.autoLogout(expiresIn * 1000); //tranformando em Milisegundo
     localStorage.setItem('userData', JSON.stringify(localUserToken)); //Quardaremos em LocalStorage um String com todos os Dados.
   }
 
-  autoLogoutWithLocalStorage(expirationDate: number) {
+
+  autoLogin() {
+    const localUserStorage: { email: string; id: string; _token: string; _tokenExpirationDate: string; } = JSON.parse(localStorage.getItem('userData') as string);
+    if (!localUserStorage) {
+      return;
+    }
+    const localUserLogin = new UserTokenModel(localUserStorage.email, localUserStorage.id, localUserStorage._token, new Date(localUserStorage._tokenExpirationDate));
+    if (localUserLogin.token) {
+      this.isUserLogin.next(localUserLogin);
+      /**
+       * aqui precisamos calcular o tempo restante do TOKEN
+       */
+      const expirationDuration = new Date(localUserStorage._tokenExpirationDate).getTime() - new Date().getTime();
+      this.autoLogout(expirationDuration);
+    }
+
+  }
+
+  autoLogout(expirationDate: number) {
     this.tokenExpirationTimer = setTimeout(() => {
       this.logOut();
     }, expirationDate);
