@@ -5,19 +5,19 @@ import { UserTokenModel } from '../_share/model/user-token-model';
 import { BehaviorSubject, tap } from 'rxjs';
 import { IAuthApiToken } from '../_share/Interfaces/iAuthRestApi';
 
+const  WEB_KEY: string = `AIzaSyDUGrx7p2gLqHA6JY9PeLvo8WrTurK_th0`;
+const  LOGIN_END_POINT: string = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${WEB_KEY}`
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
- private WEB_KEY: string = `AIzaSyDUGrx7p2gLqHA6JY9PeLvo8WrTurK_th0`;
- private LOGIN_END_POINT: string = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${this.WEB_KEY}`
   private tokenExpirationTimer: any;
   isUserLogin: BehaviorSubject<UserTokenModel | any> = new BehaviorSubject<UserTokenModel | any>(null); /**Salvando o Token no model */
   constructor(private http: HttpClient, private router: Router) { }
 
 
   signInUser(email: string, password: string) {
-    return this.http.post<IAuthApiToken>(this.LOGIN_END_POINT,
+    return this.http.post<IAuthApiToken>(LOGIN_END_POINT,
       {email: email, password: password, returnSecureToken: true}).pipe(tap(res => {
         console.log('handleAuthentication: ', res);
         this.handleAuthentication(res.email, res.localId, res.idToken, +res.expiresIn);
