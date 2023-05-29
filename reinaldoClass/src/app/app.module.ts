@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './_header/header.component';
 import { FooterComponent } from './_footer/footer.component';
-import { DataBaseComponent } from './data-base/data-base.component';
+
 import { CSharpComponent } from './c-sharp/c-sharp.component';
 import { BodyComponent } from './_body/body.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
@@ -19,15 +19,16 @@ import { AuthInterceptorService } from './_auth/auth-interceptor.service';
 import { AuthModule } from './_auth/auth.module';
 import { CSharpModule } from './c-sharp/c-sharp.module';
 import { DataBaseModule } from './data-base/data-base.module';
+import { DataBaseComponent } from './data-base/data-base.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    DataBaseComponent,
     CSharpComponent,
     BodyComponent,
+    
 
 
   ],
