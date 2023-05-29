@@ -5,8 +5,8 @@ import { AngularFireModule } from '@angular/fire/compat'
 
 
 
-import { CSharpComponent } from './c-sharp/c-sharp.component';
-import { DataBaseComponent } from './data-base/data-base.component';
+
+
 import { BodyComponent } from './_body/body.component';
 import { environment } from 'src/environments/environment';
 
@@ -14,9 +14,9 @@ import { environment } from 'src/environments/environment';
 
 const routes: Routes = [
   { path: '', redirectTo: 'body', pathMatch: 'full' },
-  { path: 'cSharp', loadChildren: () => import('./c-sharp/c-sharp.module').then(module => module.CSharpModule)},
-  { path: 'dataBase', component: DataBaseComponent },
   { path: 'body', component: BodyComponent },
+  { path: 'cSharp', loadChildren: () => import('./c-sharp/c-sharp.module').then(module => module.CSharpModule)},
+  { path: 'dataBase', loadChildren: () => import('./data-base/data-base.module').then(module => module.DataBaseModule) },
   { path: 'auth', loadChildren: () => import('./_auth/auth.module').then(module => module.AuthModule) },
   { path: '**', redirectTo: '' }
 

@@ -17,12 +17,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptorService } from './_auth/auth-interceptor.service';
 import { AuthModule } from './_auth/auth.module';
-import { SintaxComponent } from './data-base/sintax/sintax.component';
-import { TokenComponent } from './c-sharp/token/token.component';
-import { HttpDeleteComponent } from './c-sharp/http-delete/http-delete.component';
-import { HttpGetComponent } from './c-sharp/http-get/http-get.component';
-import { HttpPostComponent } from './c-sharp/http-post/http-post.component';
-import { HttpPutComponent } from './c-sharp/http-put/http-put.component';
 import { CSharpModule } from './c-sharp/c-sharp.module';
 import { DataBaseModule } from './data-base/data-base.module';
 
@@ -34,7 +28,7 @@ import { DataBaseModule } from './data-base/data-base.module';
     DataBaseComponent,
     CSharpComponent,
     BodyComponent,
-   
+
 
   ],
   imports: [
