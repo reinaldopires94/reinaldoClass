@@ -1,0 +1,67 @@
+.container {
+  margin: 0.5% auto 0.5% auto;
+  background: linear-gradient(68.15deg, #eaee0442 16.62%, #31b0e2 85.61%);
+  height: max-content;
+  border-radius: 10px;
+}
+
+button {
+  margin: 2% 0.5%;
+}
+
+h2 {
+  display: grid;
+  place-items: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-style: normal;
+  font-size: 2.5rem;
+  line-height: 20px;
+  color: #FFF2E7;
+  padding: 1.5%;
+}
+
+h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 20px;
+  color: #FFF2E7;
+}
+
+/* -----Css Imagens explain-------- */
+
+.row-container {
+  display: grid;
+  place-items: center;
+  padding: 3%;
+}
+
+.col-xs-12 {
+  padding: 0.5%;
+  margin: 1% 0%;
+}
+.col-xs-12.picture{
+  background: inherit;
+
+}
+.col-xs-12.picture:hover {
+  background: linear-gradient(68.15deg, #d5d5f1 16.62%, #131d2c 85.61%);
+
+}
+
+/* ------------------centralizando as imagens--------------------------- */
+.image {
+  display: grid;
+  place-items: center;
+  padding: 3%;
+}
+
+img {
+  border-radius: 8px;
+  border-color: rgba(146, 144, 144, 0.582);
+  border-style: solid ;
+  box-sizing: 2px;
+  width: 90%;
+  object-fit: fill;
+
+}

@@ -24,27 +24,20 @@ a:hover{
 .container {
   width: 100%;
   margin: 0.5% auto 0.5% auto;
-  height: fit-content;
+  height: max-content;
 
 }
 
 main {
   background: linear-gradient(68.15deg, #0505f3 16.62%, #055160 85.61%);
-  /* height: max-content; */
+  height: 88vh;
   box-shadow: 0 0 25px 0.5em #9b9baca9,
     inset 0 0 25px 0.25em #17171aa9,
     inset 0 0 5em 0px #7a52e78f;
   border-radius: 10px;
+
 }
 
-
-
-
-
-
-h1 {
-  padding: 1% 0%;
-}
 
 button {
   margin: 2% 0.5%;
@@ -79,14 +72,6 @@ img {
   object-fit: fill;
 
 }
-main {
-  background: linear-gradient(68.15deg, #0e0e3f 16.62%, #f122f1 85.61%);
-  height: max-content;
-  box-shadow: 0 0 25px 0.5em #9b9baca9,
-    inset 0 0 25px 0.25em #17171aa9,
-    inset 0 0 5em 0px #7a52e78f;
-}
-
 
 
 

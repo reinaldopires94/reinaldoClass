@@ -1,6 +1,8 @@
 .container {
-  background: linear-gradient(68.15deg, #8ff88b 16.62%, #576469 85.61%);
+  margin: 0.5% auto 0.5% auto;
+  background: linear-gradient(68.15deg, #0cee0442 16.62%, #31b0e2 85.61%);
   height: max-content;
+  border-radius: 10px;
 }
 
 button {
@@ -43,7 +45,7 @@ h3 {
 
 }
 .col-xs-12.picture:hover {
-  background: linear-gradient(68.15deg, #b7b7d8 16.62%, #2657a1 85.61%);
+  background: linear-gradient(68.15deg, #d5d5f1 16.62%, #131d2c 85.61%);
 
 }
 
