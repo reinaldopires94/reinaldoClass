@@ -4,6 +4,7 @@ import { AuthComponent } from './auth.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { SpinnerComponent } from '../_share/spinner/spinner.component';
+import { ModalComponent } from '../_share/modal/modal.component';
 
 
 
@@ -13,7 +14,8 @@ import { SpinnerComponent } from '../_share/spinner/spinner.component';
 @NgModule({
     declarations: [
         AuthComponent,
-        SpinnerComponent
+        SpinnerComponent,
+        ModalComponent
 
 
     ],
@@ -26,6 +28,9 @@ import { SpinnerComponent } from '../_share/spinner/spinner.component';
         ])
 
 
+    ],
+    exports: [
+      ModalComponent
     ]
 })
 export class AuthModule { }

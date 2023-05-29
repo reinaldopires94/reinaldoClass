@@ -19,7 +19,7 @@ import { AuthInterceptorService } from './_auth/auth-interceptor.service';
 import { AuthModule } from './_auth/auth.module';
 import { CSharpModule } from './c-sharp/c-sharp.module';
 import { DataBaseModule } from './data-base/data-base.module';
-import { DataBaseComponent } from './data-base/data-base.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { DataBaseComponent } from './data-base/data-base.component';
     FooterComponent,
     CSharpComponent,
     BodyComponent,
-    
+
+
 
 
   ],
@@ -49,7 +50,9 @@ import { DataBaseComponent } from './data-base/data-base.component';
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase())
   ],
-  exports: [],
+  exports: [
+
+  ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true }],
   bootstrap: [AppComponent]
 })

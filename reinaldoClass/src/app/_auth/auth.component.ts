@@ -16,6 +16,8 @@ export class AuthComponent implements OnInit {
   authenticationForm!: FormGroup;
   displayStyle = { displayBlock: "none", displayStyle: '' };
   localModal: { status: string, statusText: string, name: string } | any = {};
+  localModalSucess: { status: string, statusText: string, name: string } | any = {};
+  isSucess: boolean = false;
 
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
@@ -39,14 +41,12 @@ export class AuthComponent implements OnInit {
       this.authService.signInUser(this.authenticationForm.get('email')?.value, this.authenticationForm.get('password')?.value).subscribe(
         {
           next: (data: IAuthApiToken) => {
-            this.isLodingSpinner = false;
-          //  console.log('Response Data: ',data)
-            this.localModal.name = 'All Right!!! ';
-            this.localModal['status'] = 'Welcome';
-            this.localModal['statusText'] = 'You are Login';
-            this.displayStyle.displayStyle = 'alert-success';
-            this.openModal();
-             this.router.navigateByUrl('/body');
+            console.log('Response Data in the Auth: ',data)
+            this.localModalSucess.name = 'All Right!!! ';
+            this.localModalSucess['status'] = 'Welcome';
+            this.localModalSucess['statusText'] = 'You are Login';
+            // this.displayStyle.displayStyle = 'alert-success';
+            this.isSucess = true;
 
 
           },
@@ -66,9 +66,17 @@ export class AuthComponent implements OnInit {
 
 
 
+
+
+  }
+
+  closeModalSucess() {
+    this.isSucess = false;
+    this.router.navigateByUrl('/body');
   }
 
   openModal() {
+    this.isLodingSpinner = false;
     this.displayStyle.displayBlock = "block";
     this.authenticationForm.reset();
 
