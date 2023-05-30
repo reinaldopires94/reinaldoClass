@@ -1,6 +1,6 @@
 import { Subscription } from 'rxjs';
 import { Component, EventEmitter, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { IAuthApiToken } from 'src/app/_share/Interfaces/iAuthRestApi';
 import { AuthService } from './auth.service';
@@ -15,7 +15,7 @@ export class AuthComponent implements OnInit {
 
   isLoginMode = true;
   isLodingSpinner = false;
-  authenticationForm!: FormGroup;
+  authenticationForm!: UntypedFormGroup;
   displayStyle = { displayBlock: "none", displayStyle: '' };
   localModal: { status: string, statusText: string, name: string } | any = {};
   localModalSucess: { status: string, statusText: string, name: string } | any = {};
@@ -23,7 +23,7 @@ export class AuthComponent implements OnInit {
   subs!: Subscription;
 
 
-  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
+  constructor(private fb: UntypedFormBuilder, private authService: AuthService, private router: Router) {
     this.authenticationForm = fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.min(8)]],
