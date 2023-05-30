@@ -47,8 +47,6 @@ export class AuthComponent implements OnInit {
             this.localModalSucess['statusText'] = 'You are Login';
             // this.displayStyle.displayStyle = 'alert-success';
             this.isSucess = true;
-
-
           },
           error: (e: any) => {
             this.isLodingSpinner = false;
@@ -70,8 +68,8 @@ export class AuthComponent implements OnInit {
 
   }
 
-  closeModalSucess() {
-    this.isSucess = false;
+  closeModalSucess(event: any) {
+    this.isSucess = event;
     this.router.navigateByUrl('/body');
   }
 

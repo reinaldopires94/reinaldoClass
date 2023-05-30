@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'body', component: BodyComponent },
   { path: 'cSharp', loadChildren: () => import('./c-sharp/c-sharp.module').then(module => module.CSharpModule)},
   { path: 'dataBase', loadChildren: () => import('./data-base/data-base.module').then(module => module.DataBaseModule) },
-  { path: 'auth', loadChildren: () => import('./_auth/auth.module').then(module => module.AuthModule) },
+  { path: 'auth', loadChildren: () => import('./auth/auth.module').then(module => module.AuthModule) },
   { path: '**', redirectTo: '' }
 
 

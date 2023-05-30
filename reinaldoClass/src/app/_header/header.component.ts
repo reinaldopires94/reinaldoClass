@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../_auth/auth.service';
+import { AuthService } from '../auth/auth.service';
 import { Subscription, take } from 'rxjs';
 
 @Component({

@@ -15,8 +15,8 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { AuthInterceptorService } from './_auth/auth-interceptor.service';
-import { AuthModule } from './_auth/auth.module';
+import { AuthInterceptorService } from './auth/auth-interceptor.service';
+import { AuthModule } from './auth/auth.module';
 import { CSharpModule } from './c-sharp/c-sharp.module';
 import { DataBaseModule } from './data-base/data-base.module';
 
