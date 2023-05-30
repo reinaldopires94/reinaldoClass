@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { IAuthApiToken } from 'src/app/_share/Interfaces/iAuthRestApi';
 import { AuthService } from './auth.service';
+
 
 @Component({
   selector: 'app-auth',
@@ -17,7 +19,8 @@ export class AuthComponent implements OnInit {
   displayStyle = { displayBlock: "none", displayStyle: '' };
   localModal: { status: string, statusText: string, name: string } | any = {};
   localModalSucess: { status: string, statusText: string, name: string } | any = {};
-  isSucess: boolean = false;
+  isSucess: boolean | any = false; /**Recebe um evento que é VOID sem paramentros */
+  subs!: Subscription;
 
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
@@ -62,14 +65,10 @@ export class AuthComponent implements OnInit {
         }
       );
 
-
-
-
-
   }
 
-  closeModalSucess(event: any) {
-    this.isSucess = event;
+  closeModalSucess() {
+    this.isSucess = null;
     this.router.navigateByUrl('/body');
   }
 

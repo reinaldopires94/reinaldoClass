@@ -5,7 +5,7 @@
       <div *ngIf="isLodingSpinner" style="text-align: center;">
         <app-spinner></app-spinner>
       </div>
-      <app-modal [message]="localModalSucess['statusText']" *ngIf="isSucess" (botaoClose)="closeModalSucess($event)"></app-modal>
+      <app-modal [message]="localModalSucess['statusText']" *ngIf="isSucess" (botaoClose)="closeModalSucess()"></app-modal>
       <form [formGroup]="authenticationForm" (ngSubmit)="onSubmit()" *ngIf="!isLodingSpinner">
         <div class="mb-4">
           <label for="email" class="form-label">Email address</label>

@@ -10,13 +10,13 @@
 
 .alertbox {
   position: fixed;
-  top: 30vh;
-  left: 20vw;
+  top: 25vh;
+  margin: 7.5vw auto 7.5vh auto;
   width: 35vw;
   height: 25vh;
   padding: 16px;
   z-index: 100;
-  background-color: aliceblue;
+  background: linear-gradient(68.15deg, #81a5ec 14.62%, #436892 85.61%);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 
 }
@@ -24,5 +24,3 @@
 .alert-box-actions {
   text-align: right;
 }
-
-
