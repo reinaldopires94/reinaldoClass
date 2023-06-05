@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { AuthService } from '../_auth/auth.service';
-import { Subscription, take } from 'rxjs';
+import { Subscription,  } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -10,14 +9,16 @@ import { Subscription, take } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
   isAuthenticated: boolean = false;
-  userSubs!: Subscription;
-  constructor(private auth: AuthService) { }
-
-  ngOnInit(): void {
+  userSubs: Subscription;
+  constructor(private auth: AuthService) {
     this.userSubs =  this.auth.isUserLogin.subscribe(user => {
      this.isAuthenticated = user ? true : false;// vendo se estou Autenticado
       console.log('isAuthenticated: ',this.isAuthenticated, 'User: ', user);
     })
+
+   }
+
+  ngOnInit(): void {
   }
 
 
@@ -26,6 +27,6 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnDestroy(): void {
-    //this.userSubs.unsubscribe();
+    this.userSubs.unsubscribe();
   }
 }

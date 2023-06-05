@@ -45,9 +45,9 @@ export class AuthComponent implements OnInit {
         {
           next: (data: IAuthApiToken) => {
             console.log('Response Data in the Auth: ',data)
-            this.localModalSucess.name = 'All Right!!! ';
-            this.localModalSucess['status'] = 'Welcome';
-            this.localModalSucess['statusText'] = 'You are Login';
+            // this.localModalSucess.name = 'All Right!!! ';
+            // this.localModalSucess['status'] = 'Welcome';
+            // this.localModalSucess['statusText'] = 'You are Login';
             // this.displayStyle.displayStyle = 'alert-success';
             this.isSucess = true;
           },
@@ -68,7 +68,7 @@ export class AuthComponent implements OnInit {
   }
 
   closeModalSucess() {
-    this.isSucess = null;
+    this.isSucess = null; // a var tem q resetada para null, para termos o efeito esperado.
     this.router.navigateByUrl('/body');
   }
 
