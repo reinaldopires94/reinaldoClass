@@ -17,8 +17,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptorService } from './_auth/auth-interceptor.service';
 import { AuthModule } from './_auth/auth.module';
+
+import { DataBaseModule } from './data-base-sql-server/data-base.module';
 import { CSharpModule } from './c-sharp/c-sharp.module';
-import { DataBaseModule } from './data-base/data-base.module';
+
 
 
 @NgModule({

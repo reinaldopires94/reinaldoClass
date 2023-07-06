@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SintaxComponent } from '../data-base/sintax/sintax.component';
+
 import { TokenComponent } from './token/token.component';
 import { HttpDeleteComponent } from './http-delete/http-delete.component';
 import { HttpGetComponent } from './http-get/http-get.component';
@@ -20,7 +20,7 @@ const cSharp = [
 
 @NgModule({
   declarations: [
-    SintaxComponent,
+   
     TokenComponent,
     HttpDeleteComponent,
     HttpGetComponent,

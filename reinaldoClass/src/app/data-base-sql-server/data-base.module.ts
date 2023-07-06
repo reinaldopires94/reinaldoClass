@@ -26,7 +26,8 @@ const dataBase = [
     QueryComponent,
     SqlJoinsComponent,
     SqlStoredProceduresComponent,
-    DataBaseComponent
+    DataBaseComponent,
+    SintaxComponent,
   ],
   imports: [
     CommonModule,
