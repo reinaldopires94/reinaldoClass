@@ -1,6 +1,6 @@
 .main {
   width: 100%;
-  height: min-content;
+  height: max-content;
 }
 .row {
   padding: 0% !important;

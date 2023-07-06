@@ -1,0 +1,79 @@
+.row>* {
+    margin: 0 !important;
+    padding: 0 !important;
+  
+  }
+  div.row {
+    --bs-gutter-x: 0 !important;
+    --bs-gutter-y: 0 !important;
+  }
+  
+  a{
+    color: rgba(255, 255, 255, 0.55) !important;
+  }
+  /*  ********removendo margens e padding das Rows************* */
+  
+  a:hover{
+    color: #f0b686 !important;
+  }
+  
+  .justify-content-end {
+    background: linear-gradient(68.15deg, #07389b 14.62%, #09031f 85.61%);
+  
+  }
+  .container {
+    width: 100%;
+    margin: 0.5% auto 0.5% auto;
+    height: max-content;
+  
+  }
+  
+  main {
+    background: linear-gradient(68.15deg, #0505f3 16.62%, #055160 85.61%);
+    height: 88vh;
+    box-shadow: 0 0 25px 0.5em #9b9baca9,
+      inset 0 0 25px 0.25em #17171aa9,
+      inset 0 0 5em 0px #7a52e78f;
+    border-radius: 10px;
+  
+  }
+  
+  
+  button {
+    margin: 2% 0.5%;
+  }
+  
+  h2 {
+  
+    display: grid;
+    place-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: normal;
+    font-size: 2.5rem;
+    line-height: 20px;
+    color: #FFF2E7;
+  }
+  
+  
+  /* ------------------centralizando as imagens--------------------------- */
+  .image {
+    height: fit-content;
+    display: grid;
+    place-items: center;
+    padding: 3%;
+  }
+  
+  img {
+    border-radius: 8px;
+    border-color: rgba(146, 144, 144, 0.582);
+    border-style: solid ;
+    box-sizing: 2px;
+    width: 65%;
+    object-fit: fill;
+  
+  }
+  
+  
+  
+  
+  
